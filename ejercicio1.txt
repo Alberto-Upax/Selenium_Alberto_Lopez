@@ -4,7 +4,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+<<<<<<< HEAD
 //ALM
+=======
+
+>>>>>>> 267bdeb5e93b7a2f7a675508502d6994e0ff7487
 import java.util.List;
 
 
