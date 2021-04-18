@@ -1,1 +1,60 @@
-Manejo de tu repositorio
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+<<<<<<< HEAD
+//ALM
+=======
+
+>>>>>>> 267bdeb5e93b7a2f7a675508502d6994e0ff7487
+import java.util.List;
+
+
+public class Ejercicio14 {
+
+    @Test
+    public void IngresaNeflix() {
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://www.netflix.com/uy/");
+
+        List<WebElement> listH1s = driver.findElements(By.tagName("h1"));
+        System.out.println("La cantidad de h1s es: " + listH1s.size());
+
+        for (WebElement h1 : listH1s) {
+            System.out.println("--> H1:" + h1.getText());
+        }
+        List<WebElement> listH2s = driver.findElements(By.tagName("h2"));
+        System.out.println("La cantidad de h2s es: " + listH2s.size());
+
+        for (WebElement h2 : listH2s) {
+            System.out.println("--> H2:" + h2.getText());
+        }
+        driver.navigate().refresh();
+        {
+            List<WebElement> listButtons = driver.findElements(By.tagName("button"));
+            System.out.println("La cantidad de botones es " + listButtons.size());
+
+            for (WebElement btn : listButtons) {
+                System.out.println("Boton: " + btn.getText());
+            }
+            {
+
+                List<WebElement> listDiv = driver.findElements(By.tagName("div"));
+                System.out.println("La cantidad de div es " + listDiv.size());
+
+                for (WebElement div : listDiv) {
+                    System.out.println("div: " + div.getText());
+
+                }
+                System.out.println(driver.getCurrentUrl());
+                System.out.println(driver.getTitle());
+
+            }
+            List<WebElement> listlinks = driver.findElements(By.tagName("a"));
+            System.out.println("La cantidad de links son: " + listlinks.size());
+        }
+    }
+}
